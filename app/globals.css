@@ -2,26 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+#navbar, li, button{
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dropbtn {
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  transition: 0.2s ease;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #00000023;
+  transition: 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.slick-slide img {
+  margin: auto;
+}
+
+#news{
+  width: 70%;
+  height: auto;
+}
+
+.border-news{
+  border-bottom: 1px dotted #c00404;
+  padding: 0 0 10px 0;
+}
+
+.news-btn button{
+  border: 1px solid #c00404;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.news-btn button:hover{
+  background-color: #c00404;
+  color: white;
+}
+
+#schedule{
+  width: 57em;
+  height: auto;
+}
+
+#birthday{
+  width: 57em;
+  height: auto;
+}
+
+#b-card{
+  width: 57em;
+}
+
+.card{
+  border-bottom: 1px dotted #c00404;
+}
+
+#border1{
+  width: 7em;
+}
+
+#border2{
+width: 49em;
 }

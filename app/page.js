@@ -1,113 +1,155 @@
-import Image from 'next/image'
+'use client'
+import react from 'react'
+import Navbar from './components/Navbar'
+import images from './components/images.js'
+import ImageSlider from './components/ImageSlider'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className='overflow-hidden'>
+    {/* navbar & slider */}
+    <Navbar/>
+    <ImageSlider images={images}/>
+
+    {/* news */}
+    <div className='news my-28'>
+      <h1 className='flex justify-center text-3xl font-bold font-sans text-red-600'>NEWS</h1>
+      <div className='m-auto my-14' id='news'>
+      <div  className='content1'>
+      <div className='flex justify-start mt-7'>
+          <img src='/icon.cat1.png'></img><p className='ms-3 text-sm'>13 Juni 2023</p>
+        </div>
+        <div className='border-news'>
+          <a href='' className='text-red-400 font-sans hover:text-blue-500 text-sm transition ease-in'>
+            Pengumuman Mengenai Penambahan Sesi pada Video Call with JKT48, Digital Photobook “寿司の日 - Sushi Day”</a>
         </div>
       </div>
+      <div  className='content2'>
+      <div className='flex justify-start mt-7'>
+          <img src='/icon.cat1.png'></img><p className='ms-3 text-sm'>11 Juni 2023</p>
+        </div>
+        <div className='border-news'>
+          <a href='' className='text-red-400 font-sans hover:text-blue-500 text-sm transition ease-in'>
+            Pengumuman Mengenai JKT48 Ponytail dan Shu-Shu MV Showcase</a>
+        </div>
+      </div>
+      <div  className='content3'>
+      <div className='flex justify-start mt-7'>
+          <img src='/icon.cat1.png'></img><p className='ms-3 text-sm'>7 Juni 2023</p>
+        </div>
+        <div className='border-news'>
+          <a href='' className='text-red-400 font-sans hover:text-blue-500 text-sm transition ease-in'>
+            PPengumuman Mengenai Birthday 2-Shot Online Bulan Juni dengan Chekicha</a>
+        </div>
+      </div>
+      <div  className='content4'>
+      <div className='flex justify-start mt-7'>
+          <img src='/icon.cat1.png'></img><p className='ms-3 text-sm'>6 Juni 2023</p>
+        </div>
+        <div className='border-news'>
+          <a href='' className='text-red-400 font-sans hover:text-blue-500 text-sm transition ease-in'>
+            Pengumuman Mengenai Pre-Order Digital Photobook “寿司の日 - Sushi Day” Dengan Bonus Video Call With JKT48</a>
+        </div>
+      </div>
+      </div>
+      <div className='news-btn flex justify-center'>
+        <button className='text-red-600 w-80 h-10 font-bold'>Check all</button>
+      </div>
+    </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+    {/* schedule */}
+    <div className='mt-28 bg-rose-100'>
+      <div className='m-auto' id='schedule'>
+      <h1 className='flex justify-center text-3xl font-bold font-sans text-red-600 pb-5 pt-20'>SCHEDULE</h1>
+      <div className='border-with-tip bg-white border-4 border-red-600 m-auto rounded-md mb-5 mt-5 p-2'>
+        <p className='flex justify-center text-sm font-bold'>JKT48 THEATER/EVENT/MEDIA</p>
+      </div>
+    <div className='flex justify-center'>
+    <div className='schedule-table'>
+    <table className='table-auto'>
+      <tbody>
+        <tr className='flex'>
+          <td className='border border-red-300 text-lg font-bold text-rose-600 bg-rose-200 text-center py-3' id='border1'>13/8 <br/> (Minggu)</td>
+          <td className='border border-red-300 flex bg-white' id='border2'><img src='/icon.cat2.png' className='w-14 h-5 mt-3 ms-4 me-4'/> 
+          <a href='' className='mt-3 font-sans text-red-400 hover:text-blue-500'>The Sounds Project Vol. 6</a></td>
+        </tr>
+        <tr className='flex'>
+          <td className='border border-red-300 text-lg font-bold text-blue-600 bg-blue-100 text-center py-3' id='border1'>5/8 <br/> (Sabtu)</td>
+          <td className='border border-red-300 flex bg-white' id='border2'><img src='/icon.cat2.png' className='w-14 h-5 mt-3 ms-4 me-4'/> 
+          <a href='' className='mt-3 font-sans text-red-400 hover:text-blue-500'>Projek-D Vol. 2</a></td>
+        </tr>
+        <tr className='flex'>
+          <td className='border border-red-300 text-lg font-bold text-rose-600 bg-rose-200 text-center py-3' id='border1'>16/7 <br/> (Minggu)</td>
+          <td className='border border-red-300 flex bg-white' id='border2'><img src='/icon.cat2.png' className='w-14 h-5 mt-3 ms-4 me-4'/> 
+          <a href='' className='mt-3 font-sans text-red-400 hover:text-blue-500'>Liburland Fest</a></td>
+        </tr>
+        <tr className='flex'>
+          <td className='border border-red-300 text-lg font-bold bg-white text-center py-3' id='border1'>7/7 <br/> (Jum'at)</td>
+          <td className='border border-red-300 flex bg-white' id='border2'><img src='/icon.cat2.png' className='w-14 h-5 mt-3 ms-4 me-4'/> 
+          <a href='' className='mt-3 font-sans text-red-400 hover:text-blue-500'>Jakarta Fair Kemayoran 2023</a></td>
+        </tr>
+        <tr className='flex'>
+          <td className='border border-red-300 text-lg font-bold text-rose-600 bg-rose-200 text-center py-3' id='border1'>16/8 <br/> (Minggu)</td>
+          <td className='border border-red-300 flex bg-white' id='border2'><img src='/icon.cat2.png' className='w-14 h-5 mt-3 ms-4 me-4'/> 
+          <a href='' className='mt-3 font-sans text-red-400 hover:text-blue-500'>CooLAb Festival</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+      </div>
+      <div className='news-btn flex justify-center py-10'>
+        <button className='text-red-600 w-80 h-10 font-bold'>Check all</button>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* next birthday */}
+      <div className='pb-36 pt-5'>
+        <div className='m-auto' id='birthday'>
+      <div className='border-with-tip bg-white border-4 border-red-600 m-auto rounded-md mb-5 mt-5 p-2'>
+        <p className='flex justify-center text-sm font-bold'>NEXT BIRTHDAY</p>
       </div>
+        </div>
+
+        <div className='flex justify-between m-auto' id='b-card'>
+        <div class="card flex me-10 pb-4">
+    <img src="/gendis_mayrannisa.jpg" alt="Gendis" className='w-28'/>
+    <div class="text text-sm w-56 ms-5">
+    <a href='' className='text-rose-500 hover:text-blue-500'>
+    <h3>[Trainee]</h3>
+      <p>Gendis Mayrannisa</p>
+      <p>23 Juni 2010</p>
+    </a>
+    </div>
+  </div>
+
+  <div class="card flex me-10 pb-4">
+    <img src="/gita_sekar_andarini.jpg" alt="Gendis" className='w-28'/>
+    <div class="text text-sm w-56 ms-5">
+    <a href='' className='text-rose-500 hover:text-blue-500'>
+      <h3>[JKT48]</h3>
+      <p>Gita Sekar Andarini</p>
+      <p>30 Juni 2001</p>
+        </a>
+    </div>
+  </div>
+
+  <div class="card flex me-10 pb-4">
+    <img src="/mutiara_azzahra.jpg" alt="Gendis" className='w-28'/>
+    <div class="text text-sm w-56 ms-5">
+    <a href='' className='text-rose-500 hover:text-blue-500'>
+      <h3>[JKT48]</h3>
+      <p>Mutiara Azzahra</p>
+      <p>12 Juli 2004</p>
+      </a>
+    </div>
+  </div>
+  </div>
+      </div>
+    </div>
+
+    {/* about */}
+    
+
     </main>
   )
 }
