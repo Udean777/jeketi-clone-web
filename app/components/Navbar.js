@@ -1,12 +1,13 @@
 import react from "react";
 import '../globals.css'
+import Image from 'next/image'
 
 export default function Navbar(){
     return(
         <>
         <div className="flex justify-between">
             <div className="flex">
-        <a href="#home" className="pointer-events-none"><img src="/logo.svg" alt="jeketi" className="w-16 ms-28 pointer-events-auto"/></a>
+        <a href="#home" className="pointer-events-none"><Image src="/logo.svg" width={64} height={64} alt="jeketi" className="w-16 ms-28 pointer-events-auto"/></a>
         <p className="mt-7 text-lg ms-2 font-bold text-red-600">JKT48 <br/> Official Website</p>
             </div>
         <div className="flex me-28 justify-center my-4">
@@ -15,8 +16,8 @@ export default function Navbar(){
             <a href="" className="text-red-600 text-sm ms-1 h-6 hover:text-blue-500 transition ease-in">Register</a>
             </div>
             <div className="flex mb-auto ms-3">
-            <img src="/flag-indonesia.svg" className="w-7" />
-            <img src="/flag-japan.svg" className="w-7 ms-3" />
+            <Image width={28} height={28} src="/flag-indonesia.svg" alt="Indonesia" className="w-7" />
+            <Image width={28} height={28} src="/flag-japan.svg" alt="Jepang" className="w-7 ms-3"/>
             </div>
         </div>
         </div>
