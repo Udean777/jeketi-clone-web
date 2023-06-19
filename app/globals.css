@@ -96,3 +96,49 @@
 #border2{
 width: 49em;
 }
+
+#button1, #button2, #button3, #button4{
+  margin: auto;
+  text-align: center;
+  border-radius: 50px;
+  width: 70em;
+  border: 1px solid #000;
+  transition: 0.3s ease;
+}
+
+#button1:hover, #button2:hover, #button3:hover, #button4:hover{
+  background-color: #000;
+  color: white;
+}
+
+#about-back{
+  background-image: url('/theater.jpeg');
+  background-repeat: no-repeat;
+  background-size: 90em;
+}
+
+#release{
+  width: 70em;
+  height: 37em;
+}
+
+#release2{
+  width: 70em;
+  height: 37em;
+}
+
+#hightension{
+  height: 29em;
+}
+
+#rapsodi{
+  height: 27em;
+}
+
+#text-rapsodi, #text-high-tension{
+  border-bottom: 1px solid #c00404;
+}
+
+#track-list{
+  font-size: 13px;
+}

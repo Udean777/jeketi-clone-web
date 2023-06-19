@@ -1,14 +1,15 @@
 import react from "react";
-import '../globals.css'
+import './globals.css'
 import Image from 'next/image'
+import Link from "next/link";
 
 export default function Navbar(){
     return(
         <>
-        <div className="flex justify-between">
+        <nav className="flex justify-between">
             <div className="flex">
-        <a href="#home" className="pointer-events-none"><Image src="/logo.svg" width={64} height={64} alt="jeketi" className="w-16 ms-28 pointer-events-auto"/></a>
-        <p className="mt-7 text-lg ms-2 font-bold text-red-600">JKT48 <br/> Official Website</p>
+        <a href="/" className="pointer-events-none"><Image src="/logo.svg" width={64} height={64} alt="jeketi" className="w-16 ms-28 pointer-events-auto"/></a>
+        <p className="mt-7 text-lg ms-2 font-bold text-red-600"><Link href="/components/member">JKT48</Link> <br/> Official Website</p>
             </div>
         <div className="flex me-28 justify-center my-4">
             <div>
@@ -20,12 +21,13 @@ export default function Navbar(){
             <Image width={28} height={28} src="/flag-japan.svg" alt="Jepang" className="w-7 ms-3"/>
             </div>
         </div>
-        </div>
+        </nav>
         <div className="flex justify-center bg-red-600 py-0 mt-4">
             <ul className="flex" id="navbar">
                 <li className="text-center w-40 py-5 text-sm text-white font-sans hover:bg-red-700 transition ease-in"><a href="">NEWS</a></li>
-                <li className="text-center w-40 py-5 text-sm text-white font-sans hover:bg-red-700 transition ease-in"><a href="">SCHEDULE</a></li>
-                <li className="text-center w-40 py-5 text-sm text-white font-sans hover:bg-red-700 transition ease-in"><a href="">MEMBER</a></li>
+                <li className="text-center w-40 py-5 text-sm text-white font-sans hover:bg-red-700 transition ease-in"><Link href="">SCHEDULE</Link></li>
+                <Link href='/member' className="text-center w-40 py-5 text-sm text-white font-sans hover:bg-red-700 transition ease-in">MEMBER</Link>
+                
                 <div className="dropdown">
                     <button className="dropbtn text-white w-40 font-sans rounded inline-flex items-center hover:bg-red-700">
                     <div className="flex justify-center m-auto">

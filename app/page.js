@@ -1,9 +1,15 @@
 'use client'
 import react from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './Navbar.js'
 import images from './components/images.js'
 import ImageSlider from './components/ImageSlider'
 import Image from 'next/image'
+import Slider from './components/ContentSlider'
+import ContentSlider from './components/ContentSlider'
+import Link from 'next/link.js'
+import YouTubeSlider from './components/YtSlider.js'
+import AutoSlider from './components/YtSlider.js'
+import Footer from './Footer.js'
 
 export default function Home() {
   return (
@@ -21,8 +27,8 @@ export default function Home() {
           <Image width={50} height={20} src='/icon.cat1.png' alt='theater'/><p className='ms-3 text-sm'>13 Juni 2023</p>
         </div>
         <div className='border-news'>
-          <a href='' className='text-red-400 font-sans hover:text-blue-500 text-sm transition ease-in'>
-            Pengumuman Mengenai Penambahan Sesi pada Video Call with JKT48, Digital Photobook “寿司の日 - Sushi Day”</a>
+          <Link href='/components/member' className='text-red-400 font-sans hover:text-blue-500 text-sm transition ease-in'>
+            Pengumuman Mengenai Penambahan Sesi pada Video Call with JKT48, Digital Photobook “寿司の日 - Sushi Day”</Link>
         </div>
       </div>
       <div  className='content2'>
@@ -149,8 +155,92 @@ export default function Home() {
     </div>
 
     {/* about */}
-    
+    <div className='py-48 w-full' id='about-back'>
+    <div className='flex justify-center py-5' >
+        <button className='text-black font-bold py-5 bg-white' id='button1'>Apa itu theater JKT48?</button>
+      </div>
 
+      <div className='flex justify-center py-5'>
+        <button className='text-black font-bold py-5 bg-white' id='button2'>Theater Virtual Tour 360°</button>
+      </div>
+
+      <div className='flex justify-center py-5'>
+        <button className='text-black font-bold py-5 bg-white' id='button3'>Tata Cara Pembelian Ticket</button>
+      </div>
+
+      <div className='flex justify-center py-5'>
+        <button className='text-black font-bold py-5 bg-white' id='button4'>Jadwal Event + Pembelian Ticket</button>
+      </div>
+    </div>
+
+    {/* release */}
+    <ContentSlider/>
+
+    {/* Video */}
+    <AutoSlider/>
+
+    {/* goods */}
+    <div className='pt-24 pb-3 bg-rose-100 w-full'>
+      <h1 className='flex justify-center text-3xl font-bold font-sans text-red-600'>GOODS</h1>
+      <div className='flex justify-center gap-4 pt-10'>
+        <div className='w-64'>
+        <Image src='/thumbnail.jpeg' width={270} height={100} className='pb-3'/>
+        <Link href='' className='text-sm pt-10 hover:text-blue-500'>Pre-order Batch Kedua JKT48 Calendar 2023 “The Morning Call”</Link>
+        </div>
+        <div className='w-64'>
+        <Image src='/thumbnail.jpeg' width={270} height={100} className='pb-3'/>
+        <Link href='' className='text-sm pt-10 hover:text-blue-500'>Pengumuman Mengenai Merchandise Spesial JKT48 11th Anniversary Concert: Flying High</Link>
+        </div>
+        <div className='w-64'>
+        <Image src='/thumbnail (1).jpeg' width={270} height={100} className='pb-3'/>
+        <Link href='' className='text-sm pt-10 hover:text-blue-500'>JKT48 2023 Calendar “The Morning Call”</Link>
+        </div>
+        <div className='w-64'>
+        <Image src='/thumbnail (2).jpeg' width={270} height={100} className='pb-3'/>
+        <Link href='' className='text-sm pt-10 hover:text-blue-500'>Pengumuman Mengenai CD di Boxset “Flying High”</Link>
+        </div>
+      </div>
+      <div className='news-btn flex justify-center py-10'>
+        <button className='text-red-600 w-80 h-10 font-bold'>Check all</button>
+      </div>
+      </div>
+
+      {/* special links */}
+      <div className='py-24'>
+      <h1 className='flex justify-center text-3xl font-bold font-sans text-red-600'>SPECIAL LINKS</h1>
+      <div className='flex justify-center gap-4 py-10'>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/banner.footer.mvp.png' width={370} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/banner.footer.fanletter.jpg' width={370} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/banner.footer.handshake.png' width={370} height={100}/></Link>
+      </div>
+      </div>
+
+      {/* 48 groups */}
+      <div className='pb-16'>
+      <h1 className='flex justify-center text-3xl font-bold font-sans text-red-600'>48 GROUP</h1>
+      <div className='flex justify-center py-7'>
+        <div className='grid grid-cols-4 gap-3'>
+          {/* col1 */}
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/akb48.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/ske48.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/nmb48.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/hkt48.png' width={270} height={100}/></Link>
+        {/* col2 */}
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/ngt48.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/stu48.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/bnk48.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/mnl48.png' width={270} height={100}/></Link>
+        {/* col3 */}
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/AKBSH.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/AKBTP.png' width={270} height={100}/></Link>
+        <Link href='' className='hover:opacity-80 transition ease-in'><Image src='/CGM48.png' width={270} height={100}/></Link>
+        </div>
+      </div>
+      </div>
+
+      {/* footer */}
+      <Footer/>
     </main>
   )
 }
+ 
